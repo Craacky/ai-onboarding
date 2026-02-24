@@ -8,27 +8,17 @@ The project is designed as a **Portfolio/Educational** piece demonstrating a ful
 
 ## 🚀 Key Features
 
-* 
+ 
 **RAG-based AI:** High-fidelity answers based on company documents with zero hallucinations.
-
-
-* 
+ 
 **Multi-tenant Architecture:** Total data isolation between different organizations at the database and vector levels.
-
-
-* 
+ 
 **Real-time Interaction:** Chat streaming and document processing updates via WebSockets.
-
-
-* 
+ 
 **Role-Based Access (RBAC):** Admin (can upload docs/invite users) and Member (read-only) roles.
-
-
-* 
+ 
 **Subscription Management:** Integrated Stripe billing with tiered plans (Free, Pro, Enterprise).
-
-
-* 
+ 
 **Automated Pipeline:** Background document processing using Celery and Redis.
 
 
@@ -56,7 +46,6 @@ The project is designed as a **Portfolio/Educational** piece demonstrating a ful
  |
 | **CI/CD** | GitHub Actions | Automated testing and deployment 
 
- |
 
 ---
 
