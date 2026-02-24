@@ -20,5 +20,5 @@ build/
 .vscode/
 .DS_Store
 Thumbs.db
-
+NOTES.md
 node_modules/
