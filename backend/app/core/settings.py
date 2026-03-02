@@ -1,9 +1,9 @@
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 ENV_FILES = (BASE_DIR / ".env", BASE_DIR / "backend" / ".env")
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
@@ -30,6 +30,11 @@ class Settings(BaseSettings):
 
     CHROMA_HOST: str
     CHROMA_PORT: int
+
+    JWT_SECRET: str
+    JWT_ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    REFRESH_TOKEN_EXPIRE_DAYS: int
 
     @property
     def database_url(self) -> str:

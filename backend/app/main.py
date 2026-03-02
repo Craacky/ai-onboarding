@@ -1,12 +1,14 @@
-from fastapi import Depends, FastAPI, HTTPException
-from sqlalchemy import text, inspect
+from fastapi import Depends, FastAPI
+from sqlalchemy import text
 from sqlalchemy.orm import Session
-from starlette import status
-
+from app.api.auth import router as auth_router
+from app.api.invitations import router as invitations_router
 from app.core.deps import get_db
 from app.core.settings import settings
 
 app = FastAPI(title=settings.APP_NAME)
+app.include_router(auth_router)
+app.include_router(invitations_router)
 
 
 @app.get("/health")
